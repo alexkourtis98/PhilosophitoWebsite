@@ -180,9 +180,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -261,3 +261,14 @@ textarea {
   }
 }
 
+.bg-philbg {
+  background-color: #818479;
+}
+
+a:hover {
+  color: #DB2B39;
+}
+
+.color-philred {
+  color: #DB2B39;
+}
