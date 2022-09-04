@@ -15,7 +15,7 @@
     <link href="icon.png" rel="apple-touch-icon">
     <link href="main.css" rel="stylesheet">
     <meta content="#fafafa" name="theme-color">
-    <link href="https://mybucketkourtis.s3.eu-west-3.amazonaws.com/philosophito/newlogo.png" rel="icon"
+    <link href="./img/newlogo.png" rel="icon"
           type="image/x-icon">
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -60,7 +60,7 @@
         };
 
         (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
+            let js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s);
             js.id = id;
@@ -70,32 +70,37 @@
     </script>
 </head>
 
-<body>
+<body style="background: url('./img/back.png')   no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;">
 <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full"
         style="min-height: 100vh"
 >
-    <div class="flex flex-col bg-philbg flex-1 flex justify-center h-full">
+    <div class="flex flex-col flex-1 flex justify-center h-full"
+    >
         <div class="carousel slide h-full" data-ride="carousel" id="carouselExampleControls">
             <div class="carousel-inner h-full">
                 <div class="carousel-item active h-full">
                     <img alt="" class="h-full w-full"
-                         src="https://mybucketkourtis.s3.eu-west-3.amazonaws.com/philosophito/1.png"
+                         src="./img/3.png"
+                         style="object-fit: cover; z-index: -1">
+                </div>
+                <div class="carousel-item h-full">
+                    <img alt="" class="h-full w-full"
+                         src="./img/3.png"
                          style="object-fit: cover;">
                 </div>
                 <div class="carousel-item h-full">
                     <img alt="" class="h-full w-full"
-                         src="https://mybucketkourtis.s3.eu-west-3.amazonaws.com/philosophito/2.png"
+                         src="./img/3.png"
                          style="object-fit: cover;">
                 </div>
                 <div class="carousel-item h-full">
                     <img alt="" class="h-full w-full"
-                         src="https://mybucketkourtis.s3.eu-west-3.amazonaws.com/philosophito/3.png"
-                         style="object-fit: cover;">
-                </div>
-                <div class="carousel-item h-full">
-                    <img alt="" class="h-full w-full"
-                         src="https://mybucketkourtis.s3.eu-west-3.amazonaws.com/philosophito/4.png"
+                         src="./img/3.png"
                          style="object-fit: cover;">
                 </div>
             </div>
@@ -118,24 +123,53 @@
             <h3 class="h3">👋 Welcome </h3>
             <h4 class="h4">🤔 What is Philosophito?</h4>
             <br>
-            <p>
-                This Android App is designed to help students that are taking the Business Ethics course at Deree, ACG.
+            <p class="h5">
+                This Android App is designed to help students that are taking a Business Ethics course at college.
             </p>
             <br>
-            <p>
-                It covers most, if not all, of the course's material, the three basic moral theories:
+            <p class="h5">
+                It covers the three basic moral theories:
             </p>
             <ul>
-                <li>Utilitarianism</li>
-                <li>Kantianism</li>
-                <li>Virtue Ethics</li>
+                <li>
+                    <p class="h5">
+                        - Utilitarianism
+                    </p>
+                </li>
+                <li>
+                    <p class="h5">
+                        - Kantianism
+                    </p></li>
+                <li>
+                    <p class="h5">
+                        - Virtue Ethics
+                    </p></li>
             </ul>
-            <p>and the moral issues covered in the course, such as:</p>
+            <br>
+            <p class="h5">
+                and some moral issues covered in a typical Business Ethics course, such as:</p>
             <ul>
-                <li>Whistleblowing</li>
-                <li>Corporate Social Responsibility</li>
-                <li>Employment Rights</li>
-                <li>False Advertising</li>
+                <li>
+                    <p class="h5">
+                        - Whistleblowing
+                    </p>
+                </li>
+                <li>
+                    <p class="h5">
+                        - Corporate Social Responsibility
+                    </p>
+                </li>
+                <li><p class="h5">
+                    - Employment Rights
+                </p>
+                </li>
+                <li><p class="h5">
+                    - False Advertising
+                </p>
+                </li>
+                <li><p class="h5">
+                    Any many others...
+                </p></li>
             </ul>
             <br>
 
@@ -156,10 +190,12 @@
                                 fill="#3BCCFF"/>
                     </svg>
                 </div>
-                <div>
-                    <div class="text-xs">GET IT ON</div>
-                    <div class="text-xl font-semibold font-sans -mt-1">Google Play</div>
-                </div>
+                <a href="https://google.com" style="text-decoration: none; color: white !important;">
+                    <div style="text-align: left; cursor: pointer">
+                        <div class="text-xs">GET IT ON</div>
+                        <div class="text-xl font-semibold font-sans -mt-1">Google Play</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
