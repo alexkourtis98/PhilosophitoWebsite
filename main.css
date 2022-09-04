@@ -334,3 +334,15 @@ body {
         min-height: 350px !important;
     }
 }
+
+@media only screen and (max-height: 900px) {
+    .imgcontainer img {
+        max-height: 550px !important;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .imgcontainer img {
+        max-height: 350px !important;
+    }
+}
