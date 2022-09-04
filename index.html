@@ -68,6 +68,20 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
+    <style>
+        @media only screen and (max-width: 600px) {
+            .carousel-item img {
+                min-height: 470px !important;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .carousel-item img {
+                min-height: 350px !important;
+            }
+        }
+    </style>
 </head>
 
 <body style="background: url('./img/back.png')   no-repeat center center fixed;
@@ -76,7 +90,7 @@
   -o-background-size: cover;
   background-size: cover !important;">
 <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full"
+        class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 h-full"
         style="min-height: 100vh"
 >
     <div class="flex flex-col flex-1 flex justify-center h-full"
