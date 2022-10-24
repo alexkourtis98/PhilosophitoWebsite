@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Utilitarianism",
+    "text": "asdasdasdasd",
+    "link": "theories/utilitarianism.html",
+    "shortdesc": "Utilitarianism is a theory of morality, which advocates actions that foster happiness and oppose actions that cause unhappiness. Utilitarianism promotes \"the greatest amount of good for the greatest number of people.\"",
+    "img": "../img/john.jpg",
+    "titleslug": "utilitarianism"
+  },
+  {
+    "name": "Kantianism",
+    "text": "asdasdasdasd",
+    "link": "theories/kantianism.html",
+    "shortdesc": "Kantianism is the deontological philosophy of Immanuel Kant. It is about the duty rather than emotions or end goals. The moral value of actions is based on their underlying principle.",
+    "img": "../img/kant.jpg",
+    "titleslug": "kantianism"
+  }
+]

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="../libs/http_unpkg.com_@babel_standalone_babel.js"></script>
+    <script src="../libs/http_unpkg.com_react@18_umd_react.development.js"></script>
+    <script src="../libs/http_unpkg.com_react-dom@18_umd_react-dom.development.js"></script>
+    <title>Moral Issues</title>
+    <link href='../img/philosophito.png' rel='icon' type='image/png'>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="./moraltheories.html">Moral Theories</a></li>
+            <li><a href="./moralissues.html">Moral Issues</a></li>
+            <li><a href="./dictionary.html">Dictionary</a></li>
+            <li><a href="./foodforthought.html">Food For Thought</a></li>
+            <li><a href="./quiz.html">Quiz-Exercise sets</a></li>
+            <li style="float: right"><a href="./about.html">Philosophito</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="figureslist">
+        <ol id="root">
+        </ol>
+    </div>
+
+</main>
+
+<footer>
+    <p>Philosophito was created by <a href="https://alexkourtis.me">Alexandros Kourtis</a> and supported by <a
+            href="https://dccyberclub.com">Cyber Club</a> and <a
+            href="https://www.acg.edu/undergraduate/academic-enrichment-programs/student-academic-support-services/">SASS</a>.
+    </p>
+</footer>
+
+<script type="text/babel">
+
+    let datajson = []
+    let originaldatajson = [];
+
+    const root = ReactDOM.createRoot(
+        document.getElementById('root')
+    );
+
+    init();
+
+    function showData(datatoshow) {
+        let elements = [];
+        datatoshow.forEach((datum, index) => {
+            const element = (
+                <li key={index}>
+                    <div style={{
+                        "justifyContent": "start",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "marginBottom": "20px"
+                    }}>
+                        <img alt=""
+                             src={datum.img}
+                             style={{
+                                 "width": "150px",
+                                 "objectFit": "contain"
+                             }}/>
+                        <div style={{"marginLeft": "20px"}}>
+                            <h3><a href={`moralissue.html?titleslug=${datum.titleslug}`}>{datum.name}</a></h3>
+                            <p>{datum.shortdesc}</p>
+                        </div>
+                    </div>
+                </li>
+            );
+
+            elements.push(element);
+        });
+
+        root.render(elements);
+    }
+
+    async function init() {
+        datajson = await getData();
+        originaldatajson = datajson;
+        showData(datajson);
+    }
+
+    async function getData() {
+        return await fetch('../json/figures.json')
+            .then(response => response.json())
+            .then(data => data)
+            .catch(error => console.log(error));
+    }
+</script>
+</body>
+
+</html>

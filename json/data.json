@@ -1,0 +1,13 @@
+[
+  {
+    "question": "According to the definition of psychology, which of the following is a thought process?",
+    "chapter": "chapter-1",
+    "answer1": "swimming",
+    "answer2": "remembering",
+    "answer3": "walking",
+    "answer4": "playing the piano",
+    "tags": "test, test 1, test ",
+    "correct": "answer2",
+    "hidden": false
+  }
+]

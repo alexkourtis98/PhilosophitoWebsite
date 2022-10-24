@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="../libs/http_unpkg.com_@babel_standalone_babel.js"></script>
+    <script src="../libs/http_unpkg.com_react@18_umd_react.development.js"></script>
+    <script src="../libs/http_unpkg.com_react-dom@18_umd_react-dom.development.js"></script>
+    <title>Fill in the blanks</title>
+    <link href='../img/philosophito.png' rel='icon' type='image/png'>
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        #root .ansbtn {
+            width: 100px;
+            background-color: #BF996F;
+        }
+
+        #root {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #root {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="./moraltheories.html">Moral Theories</a></li>
+            <li><a href="./moralissues.html">Moral Issues</a></li>
+            <li><a href="./dictionary.html">Dictionary</a></li>
+            <li><a href="./foodforthought.html">Food For Thought</a></li>
+            <li><a href="./quiz.html">Quiz-Exercise sets</a></li>
+            <li style="float: right"><a href="./about.html">Philosophito</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="search">
+        <input class="searchTerm" id="search" onkeyup="handleChange(event)"
+               placeholder="Filter by keyword..." type="text">
+    </div>
+
+    <div id="root"></div>
+
+
+</main>
+
+<footer>
+    <p>Philosophito was created by <a href="https://alexkourtis.me">Alexandros Kourtis</a> and supported by <a
+            href="https://dccyberclub.com">Cyber Club</a> and <a
+            href="https://www.acg.edu/undergraduate/academic-enrichment-programs/student-academic-support-services/">SASS</a>.
+    </p>
+</footer>
+<script type="text/babel">
+    let questionsnumber = 0;
+    let correctanswers = 0;
+
+    let datajson = []
+    let originaldatajson = [];
+
+    const root = ReactDOM.createRoot(
+        document.getElementById('root')
+    );
+
+    async function showData(datatoshow) {
+        let elements = [];
+        await datatoshow.forEach((datum, index) => {
+            const element = (
+                <section className="chapter" key={index}>
+                    <div className="box">
+                        <h3>{datum.term}</h3>
+
+                        <p>{datum.definition} <a href={datum.source} target="_blank">[*]</a></p>
+                    </div>
+                </section>
+            );
+
+            elements.push(element);
+        });
+
+        questionsnumber = datatoshow.length;
+        correctanswers = 0;
+
+        await root.render(elements);
+        await delay(300);
+        document.getElementById('root').shuffleChildren();
+        document.getElementById('root').querySelectorAll("select").forEach(el => el.shuffleChildrenOnlyEnabled(el));
+        document.getElementById('root').style.visibility = "visible";
+    }
+
+    Element.prototype.shuffleChildrenOnlyEnabled = function (el) {
+        for (let i = el.children.length; i >= 0; i--) {
+            if (el.children[i] != null)
+                el.appendChild(el.children[Math.random() * i | 1]);
+        }
+    };
+
+    Element.prototype.shuffleChildren = function () {
+        for (let i = this.children.length; i >= 0; i--) {
+            this.appendChild(this.children[Math.random() * i | 0]);
+        }
+    };
+
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+
+    async function getData() {
+        return await fetch('../json/terms.json')
+            .then(response => response.json())
+            .then(data => data)
+            .catch(error => console.log(error));
+    }
+
+    async function init() {
+        datajson = await getData();
+        originaldatajson = datajson;
+        await showData(datajson);
+    }
+
+    function handleChange(event) {
+        const keyword = event.target.value;
+
+        const trimmedKeyword = keyword.toString().trim().toLowerCase();
+
+        cleanUpErrorsCorrects();
+
+        if (trimmedKeyword === "") {
+            showDataWithNoShuffle(datajson);
+            return;
+        }
+
+        let newlistjson = [];
+        Object.entries(datajson).forEach((value) => {
+            // bug? If you remove the line below... the search breaks because the value objects
+            // has a new field added to it with value === "0"
+            value = value[1];
+            if (value.term.trim().toLowerCase().includes(trimmedKeyword))
+                newlistjson.push(value);
+            else if (value.definition.trim().toLowerCase().includes(trimmedKeyword))
+                newlistjson.push(value);
+        });
+
+        showDataWithNoShuffle(newlistjson);
+    }
+
+    function cleanUpErrorsCorrects() {
+        const nodestexts = document.getElementsByClassName("texts");
+
+        for (let i = 0; i < nodestexts.length; i++) {
+            nodestexts[i].childNodes.forEach(node => node.textContent = "");
+        }
+
+        const nodes = document.getElementsByClassName("ansbtn");
+
+        for (let i = 0; i < nodes.length; i++) {
+            nodes[i].disabled = false;
+        }
+    }
+
+    async function showDataWithNoShuffle(datatoshow) {
+        let elements = [];
+        await datatoshow.forEach((datum, index) => {
+            const element = (
+                <section className="chapter" key={index}>
+                    <div className="box">
+                        <h3>{datum.term}</h3>
+
+                        <p>{datum.definition} <a href={datum.source} target="_blank">[*]</a></p>
+                    </div>
+                </section>
+            );
+
+            elements.push(element);
+        });
+
+        questionsnumber = datatoshow.length;
+        correctanswers = 0;
+
+        await root.render(elements);
+    }
+
+    init();
+
+</script>
+</body>
+
+</html>
