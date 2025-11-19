@@ -3,22 +3,51 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Philosophito - Business Ethics</title>
-    <meta content="" name="description">
+    <title>Philosophito - Business Ethics Study Aid for Students</title>
+    <meta content="Free Business Ethics study aid covering Utilitarianism, Kantianism, Virtue Ethics, and moral issues like CSR, whistleblowing, and affirmative action. Interactive quizzes and comprehensive dictionary for college students." name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <meta content="" property="og:title">
-    <meta content="" property="og:type">
-    <meta content="" property="og:url">
-    <meta content="" property="og:image">
+    <!-- Open Graph / Facebook -->
+    <meta content="Philosophito - Business Ethics Study Aid for Students" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="https://philosophito.com/" property="og:url">
+    <meta content="https://philosophito.com/img/philosophito.png" property="og:image">
+    <meta content="Free Business Ethics study aid covering moral theories and issues. Interactive quizzes, comprehensive dictionary, and study resources for college students." property="og:description">
+    <meta content="en_US" property="og:locale">
+    <meta content="Philosophito" property="og:site_name">
+
+    <!-- Twitter Card -->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="Philosophito - Business Ethics Study Aid" name="twitter:title">
+    <meta content="Free study aid for Business Ethics: moral theories, issues, quizzes, and dictionary for students." name="twitter:description">
+    <meta content="https://philosophito.com/img/philosophito.png" name="twitter:image">
+    <meta content="@Philosophito" name="twitter:site">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://philosophito.com/">
+
+    <!-- Keywords -->
+    <meta content="business ethics, utilitarianism, kantianism, virtue ethics, corporate social responsibility, whistleblowing, study aid, ethics education, moral philosophy" name="keywords">
 
     <link href="icon.png" rel="apple-touch-icon">
-    <link href="main.css" rel="stylesheet">
     <meta content="#fafafa" name="theme-color">
     <link href='./img/philosophito.png' rel='icon' type='image/png'>
 
-    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+
+    <!-- Optimized font loading with font-display: swap -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="main.css" rel="stylesheet">
     <link href="bootstrap4.min.css" rel="stylesheet">
     <link href="cookie.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -55,6 +84,54 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Philosophito",
+      "alternateName": "Philosophito - Business Ethics Study Aid",
+      "url": "https://philosophito.com/",
+      "description": "Free Business Ethics study aid covering Utilitarianism, Kantianism, Virtue Ethics, and moral issues. Interactive quizzes and comprehensive dictionary for college students.",
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "EducationalOrganization",
+        "name": "Philosophito",
+        "description": "Business Ethics educational resource",
+        "url": "https://philosophito.com/"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Alexandros Kourtis",
+        "email": "alexandros.kourtis@acg.edu"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://philosophito.com/html/dictionary.html?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Philosophito",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "ANDROID",
+      "description": "Business Ethics study aid for Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -68,26 +145,30 @@
             <div class="carousel-inner ">
                 <div class="carousel-item active ">
                     <div class="imgcontainer">
-                        <img alt=""
-                             src="./img/1.png">
+                        <img alt="Philosophito app screenshot showing moral theories"
+                             src="./img/1.png"
+                             loading="eager">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="imgcontainer">
-                        <img alt=""
-                             src="./img/2.png">
+                        <img alt="Philosophito app quiz interface"
+                             src="./img/2.png"
+                             loading="lazy">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="imgcontainer">
-                        <img alt=""
-                             src="./img/3.png">
+                        <img alt="Philosophito dictionary feature"
+                             src="./img/3.png"
+                             loading="lazy">
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="imgcontainer">
-                        <img alt=""
-                             src="./img/4.png">
+                        <img alt="Philosophito moral issues section"
+                             src="./img/4.png"
+                             loading="lazy">
                     </div>
                 </div>
             </div>

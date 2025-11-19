@@ -1,0 +1,29 @@
+{
+  "name": "Philosophito - Business Ethics Study Aid",
+  "short_name": "Philosophito",
+  "description": "Free Business Ethics study aid covering Utilitarianism, Kantianism, Virtue Ethics, and moral issues. Interactive quizzes and comprehensive dictionary for college students.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/img/philosophito.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/philosophito.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "reference"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}
