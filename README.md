@@ -40,7 +40,8 @@ Philosophito is a static web application designed to help college students maste
 - **HTML5, CSS3, JavaScript (ES6+)**
 - **React 18** (Production builds for performance)
 - **Bootstrap 4** - UI framework
-- **Tailwind CSS** - Utility-first styling
+- **Tailwind CSS** - Utility-first styling (local build)
+- **Font Awesome 4.7** - Icon library (local)
 - **Babel Standalone** - JSX transformation
 
 ### Data
@@ -56,8 +57,8 @@ Philosophito is a static web application designed to help college students maste
 ```
 PhilosophitoWebsite/
 ├── index.html                 # Landing page
-├── contact.html               # Contact information
 ├── privacy.html               # Privacy policy
+├── terms.html                 # Terms of Service
 ├── manifest.json              # PWA manifest
 ├── robots.txt                 # Search engine directives
 ├── sitemap.xml                # SEO sitemap
@@ -74,6 +75,8 @@ PhilosophitoWebsite/
 │       └── kantianism.html
 ├── css/
 │   ├── style.css             # Main styles
+│   ├── tailwind.min.css      # Tailwind CSS (local build)
+│   ├── font-awesome/         # Font Awesome (local)
 │   └── [font files]          # Lora typeface
 ├── img/                      # Images and icons
 ├── json/                     # Content data files
@@ -98,7 +101,7 @@ PhilosophitoWebsite/
 ### SEO Enhancements
 - Comprehensive meta tags (description, keywords, Open Graph, Twitter Cards)
 - JSON-LD structured data (Website, Quiz, Article schemas)
-- XML sitemap with all 11 pages
+- XML sitemap with all 10 pages
 - robots.txt for crawler directives
 - Canonical URLs on all pages
 - Descriptive alt texts for images

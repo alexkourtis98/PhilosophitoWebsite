@@ -50,7 +50,7 @@
     <link href="main.css" rel="stylesheet">
     <link href="bootstrap4.min.css" rel="stylesheet">
     <link href="cookie.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="css/tailwind.min.css" rel="stylesheet">
 
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
@@ -83,7 +83,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome/font-awesome.min.css" rel="stylesheet">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -277,8 +277,11 @@ justify-content: center; align-items: center;">
                 </div>
             </div>
         </div>
-        <a href="privacy.html">Privacy policy</a>
-        <a href="contact.html">Contact details</a>
+        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); text-align: center;">
+            <a href="privacy.html" style="margin-right: 1rem; color: #666; text-decoration: none;">Privacy Policy</a>
+            <span style="color: #ccc;">|</span>
+            <a href="terms.html" style="margin-left: 1rem; color: #666; text-decoration: none;">Terms of Service</a>
+        </div>
     </div>
 </div>
 
