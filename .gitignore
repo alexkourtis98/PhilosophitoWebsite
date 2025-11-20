@@ -40,3 +40,5 @@ desktop.ini
 *.bak
 *.backup
 tailwindcss-linux-x64
+.idea/
+.claude/
