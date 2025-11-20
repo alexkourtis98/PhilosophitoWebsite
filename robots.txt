@@ -1,5 +1,5 @@
 # robots.txt for Philosophito - Business Ethics Study Aid
-# https://philosophito.com
+# https://philosophito.alexandroskourtis.me
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Disallow: /*.json$
 Disallow: /libs/
 
 # Sitemap location
-Sitemap: https://philosophito.com/sitemap.xml
+Sitemap: https://philosophito.alexandroskourtis.me/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
 Crawl-delay: 1

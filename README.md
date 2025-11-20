@@ -2,7 +2,7 @@
 
 > A comprehensive, free educational web application for students studying Business Ethics. Features interactive quizzes, searchable dictionary, and detailed explanations of moral theories and ethical issues.
 
-[![Live Site](https://img.shields.io/badge/Live-philosophito.com-blue)](https://philosophito.com)
+[![Live Site](https://img.shields.io/badge/Live-philosophito.alexandroskourtis.me-blue)](https://philosophito.alexandroskourtis.me)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/username/PhilosophitoWebsite/pulls)
 
@@ -12,7 +12,7 @@
 
 Philosophito is a static web application designed to help college students master Business Ethics concepts. Built with simplicity and performance in mind, it provides an intuitive interface for learning moral theories, exploring ethical issues, and testing knowledge through interactive quizzes.
 
-**Live Demo:** [philosophito.com](https://philosophito.com)
+**Live Demo:** [philosophito.alexandroskourtis.me](https://philosophito.alexandroskourtis.me)
 
 ## Features
 
@@ -201,9 +201,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 **Alexandros Kourtis**
-- Email: [alexandros.kourtis@acg.edu](mailto:alexandros.kourtis@acg.edu)
+- Email: [akourtisdev@gmail.com](mailto:akourtisdev@gmail.com)
 - Phone: +306989442438
-- Website: [alexkourtis.me](https://alexkourtis.me)
+- Website: [alexandroskourtis.me](https://alexandroskourtis.me)
 
 ## Showcase
 
@@ -218,4 +218,4 @@ Perfect for portfolios! This project demonstrates:
 
 ---
 
-Made with dedication by Alexandros Kourtis | [philosophito.com](https://philosophito.com)
+Made with dedication by Alexandros Kourtis | [philosophito.alexandroskourtis.me](https://philosophito.alexandroskourtis.me)
